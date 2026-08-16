@@ -5,6 +5,7 @@
 const ROLES = Object.freeze({
   ADMIN: 'ADMIN',
   USER: 'USER',
+  REPARTIDOR: 'REPARTIDOR',
 });
 
 /**
@@ -16,4 +17,34 @@ const PRODUCT_STATUS = Object.freeze({
   DISCONTINUED: 'DISCONTINUED',
 });
 
-module.exports = { ROLES, PRODUCT_STATUS };
+/**
+ * Estados posibles de un pedido (Order).
+ */
+const ORDER_STATUS = Object.freeze({
+  PENDING: 'PENDING',
+  CONFIRMED: 'CONFIRMED',
+  IN_TRANSIT: 'IN_TRANSIT',
+  DELIVERED: 'DELIVERED',
+  CANCELLED: 'CANCELLED',
+});
+
+/**
+ * Prioridades posibles de un pedido (Order).
+ */
+const ORDER_PRIORITY = Object.freeze({
+  LOW: 'LOW',
+  MEDIUM: 'MEDIUM',
+  HIGH: 'HIGH',
+});
+
+/**
+ * Estados posibles de una entrega (Delivery).
+ */
+const DELIVERY_STATUS = Object.freeze({
+  ASSIGNED: 'ASSIGNED',
+  IN_PROGRESS: 'IN_PROGRESS',
+  COMPLETED: 'COMPLETED',
+  FAILED: 'FAILED',
+});
+
+module.exports = { ROLES, PRODUCT_STATUS, ORDER_STATUS, ORDER_PRIORITY, DELIVERY_STATUS };

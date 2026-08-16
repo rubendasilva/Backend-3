@@ -23,6 +23,10 @@ class ProductRepository {
     return product.save();
   }
 
+  async insertMany(productsData) {
+    return ProductModel.insertMany(productsData);
+  }
+
   async update(id, updateData) {
     return ProductModel.findByIdAndUpdate(id, updateData, {
       new: true,

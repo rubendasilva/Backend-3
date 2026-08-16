@@ -20,6 +20,10 @@ class UserRepository {
     return user.save();
   }
 
+  async insertMany(usersData) {
+    return UserModel.insertMany(usersData);
+  }
+
   async update(id, updateData) {
     return UserModel.findByIdAndUpdate(id, updateData, {
       new: true,
